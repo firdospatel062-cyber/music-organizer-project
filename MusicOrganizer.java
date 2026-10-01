@@ -18,6 +18,27 @@ public class MusicOrganizer
     {
         files = new ArrayList<>();
     }
+    // question 1
+    public void checkIndex(int index)
+    {
+        if (index<0 || index >= files.size()) {
+            System.out.println("Index " + index + " is invalid.");
+        System.out.println("Valid indexes are 0 to " 
+                           + (files.size() - 1) + ".");
+        }
+    } 
+    // question 2 
+    public boolean validIndex(int index)
+    {
+        if (index<0 || index >= files.size()) {
+            System.out.println("VALID");
+            return true;
+        } else {
+            System.out.println("INVALID");
+            return false;
+
+        }
+    } 
     
     /**
      * Add a file to the collection.
@@ -59,15 +80,10 @@ public class MusicOrganizer
             files.remove(index);
         }
     }
-    // question 1
-    public void checkIndex(int index)
-    {
-        if (index<0 || index >= files.size()) {
-            System.out.println("Index " + index + " is invalid.");
-        System.out.println("Valid indexes are 0 to " 
-                           + (files.size() - 1) + ".");
-        }
-    }
+    
+   
+    
+    
 } 
 
 
